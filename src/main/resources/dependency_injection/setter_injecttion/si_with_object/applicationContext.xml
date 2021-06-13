@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="address1" class="dependency_injection.setter_injecttion.si_with_object.Address">
+        <property name="commune" value="Xuan Phu"/>
+        <property name="district" value="Tho Xuan"/>
+        <property name="province" value="Thanh Hoa"/>
+    </bean>
+    <bean id="worker" class="dependency_injection.setter_injecttion.si_with_object.Worker">
+        <property name="name" value="Luong Ba Hoang" />
+        <property name="age" value="21"/>
+        <property name="address" ref="address1"/>
+    </bean>
+</beans>

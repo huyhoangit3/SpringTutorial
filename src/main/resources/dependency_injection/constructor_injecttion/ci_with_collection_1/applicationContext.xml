@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="question1" class="dependency_injection.constructor_injecttion.ci_with_collection_1.Question">
+        <constructor-arg name="qid" value="1" type="int"/>
+        <constructor-arg name="qName" value="What is your major?"/>
+        <constructor-arg name="answers" >
+            <list>
+                <value>Information Technology</value>
+                <value>Software Engineering</value>
+                <value>Database Administrator</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

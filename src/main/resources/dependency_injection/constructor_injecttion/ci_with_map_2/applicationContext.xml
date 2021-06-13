@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="user4" class="dependency_injection.constructor_injecttion.ci_with_map_2.User">
+        <constructor-arg value="1" type="int"/>
+        <constructor-arg value="Luong Ba Hoang"/>
+        <constructor-arg value="Thanh Hoa"/>
+        <constructor-arg value="0.0f" type="float"/>
+    </bean>
+    <bean id="user5" class="dependency_injection.constructor_injecttion.ci_with_map_2.User">
+        <constructor-arg value="2" type="int"/>
+        <constructor-arg value="Nguyen Thi Van Anh"/>
+        <constructor-arg value="Thanh Hoa"/>
+        <constructor-arg value="0.0f" type="float"/>
+    </bean>
+    <bean id="answer4" class="dependency_injection.constructor_injecttion.ci_with_map_2.Answer">
+        <constructor-arg value="1" type="int"/>
+        <constructor-arg value="USA"/>
+        <constructor-arg value="#{T(java.util.Calendar).getInstance().getTime()}" type="java.util.Date"/>
+    </bean>
+    <bean id="answer5" class="dependency_injection.constructor_injecttion.ci_with_map_2.Answer">
+        <constructor-arg value="2" type="int"/>
+        <constructor-arg value="Canada"/>
+        <constructor-arg value="#{T(java.util.Calendar).getInstance().getTime()}" type="java.util.Date"/>
+    </bean>
+    <bean id="question4" class="dependency_injection.constructor_injecttion.ci_with_map_2.Question">
+        <constructor-arg value="4" type="int"/>
+        <constructor-arg value="Where is Google headquarters?"/>
+        <constructor-arg name="answers">
+            <map>
+                <entry key-ref="answer4" value-ref="user4"/>
+                <entry key-ref="answer5" value-ref="user5"/>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>

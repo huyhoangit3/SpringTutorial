@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="question3" class="dependency_injection.constructor_injecttion.ci_with_map_1.Question">
+        <constructor-arg name="qId" value="1" type="int"/>
+        <constructor-arg name="qContent" value="What programming language are you most proficient in?"/>
+        <constructor-arg name="answers">
+            <map>
+                <entry key="Java" value="Luong Ba Hoang"/>
+                <entry key="Python" value="Guido van Rossum"/>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="answer1" class="dependency_injection.constructor_injecttion.ci_with_collection_2.Answer">
+        <constructor-arg name="answerId" value="1" type="int"/>
+        <constructor-arg name="answerContent" value="Infomation technology"/>
+        <constructor-arg name="answerBy" value="Luong Ba Hoang"/>
+    </bean>
+    <bean id="answer2" class="dependency_injection.constructor_injecttion.ci_with_collection_2.Answer">
+        <constructor-arg name="answerId" value="2" type="int"/>
+        <constructor-arg name="answerContent" value="Database administrator"/>
+        <constructor-arg name="answerBy" value="Nguyen Thi Van Anh"/>
+    </bean>
+    <bean id="question2" class="dependency_injection.constructor_injecttion.ci_with_collection_2.Question">
+        <constructor-arg name="qId" value="1" type="int"/>
+        <constructor-arg name="qContent" value="What is your major?"/>
+        <constructor-arg name="answers">
+            <list>
+                <ref bean="answer1"/>
+                <ref bean="answer2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
